@@ -1,0 +1,214 @@
+* {
+  background-color: rgb(0 168 104);
+  color: white;
+  transition: 1s ease-in-out;
+}
+
+html, body, textarea {
+  margin: 0;
+}
+
+html {
+  display: flex;
+  justify-content: space-around;
+}
+
+body {
+  flex-basis: 600px;
+  margin-top: 3em;
+  margin-bottom: 6em;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  padding: 6em;
+  box-shadow: 0 0 2em white;
+  border-radius: 20px;
+}
+
+header {
+  margin-bottom: 3em;
+}
+
+footer {
+  position: relative;
+  margin-top: 2em;
+  position: sticky;
+  text-decoration: none;
+  color: #FFFFFFAA;
+  background-color: transparent;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFFFFFAA;
+  background-color: transparent;
+}
+
+textarea {
+  flex: 1 1 600px;
+  padding: 0.2em;
+  border: 2px dashed white;
+  resize: vertical;
+  margin: 0 5em;
+  font-size: 1rem;
+}
+
+textarea::placeholder {
+  color: white;
+  padding: 18% 0 0 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+textarea:focus, textarea:active, textarea:hover {
+  outline: none;
+  background-color: rgb(0 150 86);
+}
+
+button {
+  outline: none;
+  border: 2px solid white;
+  padding: 1em;
+  font-size: 1rem;
+}
+
+button:hover, button:active {
+  outline: none;
+  background-color: rgb(0 150 86);
+}
+
+.cumulative-cases-on {
+  border: 2px inset rgb(0 150 86);
+}
+
+.cumulative-cases-on + button:hover {
+  border: 2px dashed white;
+}
+
+h1, h2 {
+  margin: 1em 0;
+}
+
+.cases-section {
+  margin: 1em 0 3em 0;
+  width: 100%
+}
+
+.buttons-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 1em 0 3em 0;
+  width: 100%
+}
+
+.members-section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  margin: 1em 0 3em 0;
+  width: 100%
+}
+
+.member {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0;
+  border-bottom: 2px dotted white;
+}
+
+.member-name {
+  text-align: left;
+  align-content: center;
+  margin: 1em;
+  width: 70%;
+  padding-left: 33%;
+}
+
+.assigned {
+  width: 30%;
+  padding-left: 0;
+}
+
+.case-list-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin: 0.2em 0;
+  width: 50%;
+}
+
+.assigned-case {
+  text-align: left;
+}
+
+.toggleWrapper {
+  padding: 0;
+  margin: 0;
+  align-content: center;
+  justify-content: space-around;
+} 
+
+/* Styling below adapted from
+ * W3Schools @ https://www.w3schools.com/howto/howto_css_switch.asp */
+
+.slider-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.slider-wrapper input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.member-toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: orangered;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .toggle-slider {
+  background-color: rgb(0 150 86);
+}
+
+input:checked + .toggle-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+

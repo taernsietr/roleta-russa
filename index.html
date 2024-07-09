@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="rgb(0 168 104)">
+  <meta name="description" content="Single-page application em Javascript para sortear casos" />
+  <meta name="author" content="Thalles Rodrigues" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Sorteador</h1>
+  </header>
+  <main>
+
+    <div class="cases-section">
+      <h2>Casos</h2>
+      <textarea id="cases" placeholder="Cole os casos aqui!" rows="10" cols="50"></textarea>
+    </div>
+
+    <div class="buttons-section">
+      <button id="distribute-cases-button" type="button" onclick="distribute_cases()">
+        Sortear Casos!
+      </button>
+      <button id="toggle-cumulative-cases-button" type="button" onclick="toggle_cumulative_cases()">
+        Acumular Casos
+      </button>
+    </div>
+
+    <div class="members-section" id="members-section">
+      <h2>Membros</h2>
+    </div>
+
+    <footer>
+      <a
+        target="_blank"
+        referrerpolicy="noreferrer"
+        href="https://www.linkedin.com/in/tsrodr"
+      >
+        Criado por Thalles de Souza Rodrigues
+      </a>
+    </footer>
+  </main>
+</body>
+<script src="scripts.js"></script>
+<script>
+  let cumulativeCases = false;
+  load_data(memberData);
+</script>
+
+</html>
