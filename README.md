@@ -12,4 +12,6 @@ Two bits of code were taken from W3Schools (slider) and StackOverflow
 
 - Allow subsequent draws without clearing previous results for disabled members;
 - Allow successive draws considering how many cases each member already
-  received.
+  received;
+- Load member names from JSON;
+- Allow for runtime adding of new members.
