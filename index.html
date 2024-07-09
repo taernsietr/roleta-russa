@@ -366,8 +366,20 @@
         .split("\n");
 
       // forgive me father for I have sinned
-      members = Array
-        .from(document.getElementsByClassName("member"))
+      all_members = Array.from(document.getElementsByClassName("member"));
+      all_members
+        .filter((member) => !member
+          .childNodes[2]
+          .childNodes[0]
+          .childNodes[0]
+          .checked
+        )
+        .map((node) => {
+          node 
+            .childNodes[1]
+            .innerHTML = ''
+        });
+      members = all_members
         .filter((member) => member
           .childNodes[2]
           .childNodes[0]
@@ -380,6 +392,8 @@
             cases: []
           }
         });
+
+
       if (members.length < 2)
         throw Error("Pelo menos dois membros da equipe precisam estar selecionados");
 
